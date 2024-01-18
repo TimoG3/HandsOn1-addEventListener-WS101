@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandsOn1</title>
+
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(110, 90, 54);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            background-color: rgb(70, 70, 70);
+            color: white;
+            font-size: 3em;
+            border: 10px solid black;
+            border-radius: 50px;
+            margin: 25px;
+            padding: 18px;
+            user-select: none;
+        }
+
+        p {
+            font-size: 2em;
+            user-select: none;
+        }
+
+        button {
+            height: 3em;
+            width: 15em;
+            margin: 15px;
+            font-size: 20px;
+            border: 7px solid;
+            border-radius: 35px;
+        }
+
+        #button1 {
+            background-color: rgb(255, 0, 0);
+            color: white;
+            border-color: black;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        #button1:hover {
+            background-color: rgb(0, 255, 255);
+            color: black;
+            border-color: white;
+        }
+
+        #button2 {
+            background-color: rgb(0, 255, 0);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        #button2:hover {
+            background-color: rgb(255, 0, 255);
+            color: white;
+            border-color: white;
+        }
+
+        #button3 {
+            background-color: rgb(0, 0, 255);
+            cursor: pointer;
+            color: white;
+            border-color: black;
+            transition: 0.5s;
+        }
+        #button3:hover {
+            background-color: rgb(255, 255, 0);
+            color: black;
+            border-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript addEventListener() Hands-On</h1>
+    <p>Try clicking one of the buttons</p>
+    
+    <button id="button1">Button 1</button>
+    <button id="button2">Button 2</button>
+    <button id="button3">Button 3</button>
+
+    <script>
+
+        function btn1() {
+        alert("Button 1 was clicked!");
+        }
+
+        function btn2() {
+        alert("Button 2 was clicked!");
+        }
+
+        function btn3() {
+        alert("Button 3 was clicked!");
+        }
+
+        document.getElementById("button1").addEventListener("click", btn1);
+        document.getElementById("button2").addEventListener("click", btn2);
+        document.getElementById("button3").addEventListener("click", btn3);
+    </script>
+</body>
+</html>
